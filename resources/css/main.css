@@ -167,6 +167,8 @@ header .col-md-4 .header-item-wrapper:first-of-type{
 .header-item-wrapper i {
     font-size: 25px;
     color:black;
+    display: inline-block;
+    padding-bottom: 8px;
 }
 
 .header-item-wrapper span{
