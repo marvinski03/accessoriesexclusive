@@ -37,19 +37,25 @@
                     <div class="col-md-4 txt-left hidden-sm hidden-xs">
 
 
-                        <a data-toggle="modal" href="{% if services.template.isCurrentTemplate("tpl.login") %}javascript:void(0){% else %}#login{% endif %}" @click="unmarkInputFields()" v-if="!isLoggedIn">
-                            <div class="header-item-wrapper">
-                                <i class="ae-icon-user"></i><br>
-                                <span>Anmelden</span>
-                            </div>
-                        </a>
+                        {% if services.customer.getContactId() > 0 %}
 
-                        <a href="{{ urls.myAccount }}" v-if="isLoggedIn">
-                            <div class="header-item-wrapper">
-                                <i class="ae-icon-user"></i><br>
-                                <span>Mein Konto</span>
-                            </div>
-                        </a>
+                             <a href="{{ urls.myAccount }}" v-if="isLoggedIn">
+                                <div class="header-item-wrapper">
+                                    <i class="ae-icon-user"></i><br>
+                                    <span>Mein Konto</span>
+                                </div>
+                            </a>
+
+                        {% else %}
+
+                            <a data-toggle="modal" href="{% if services.template.isCurrentTemplate("tpl.login") %}javascript:void(0){% else %}#login{% endif %}" @click="unmarkInputFields()" v-if="!isLoggedIn">
+                                <div class="header-item-wrapper">
+                                    <i class="ae-icon-user"></i><br>
+                                    <span>Anmelden</span>
+                                </div>
+                            </a>
+
+                        {% endif %}
 
 
 
