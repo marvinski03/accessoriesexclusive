@@ -62,3 +62,117 @@
 	}
 	
 }
+
+
+/** icon font classes **/
+
+[class^="ae-icon-"], [class*=" ae-icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'accessories-exclusive' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+}
+
+.ae-icon-home:before {
+  content: "\e600";
+}
+.ae-icon-shield-check:before {
+  content: "\e668";
+}
+.ae-icon-heart:before {
+  content: "\e68c";
+}
+.ae-icon-user:before {
+  content: "\e71e";
+}
+.ae-icon-cart:before {
+  content: "\e74d";
+}
+.ae-icon-bag-euro:before {
+  content: "\e75f";
+}
+.ae-icon-bubble:before {
+  content: "\e7d6";
+}
+.ae-icon-rocket:before {
+  content: "\e837";
+}
+.ae-icon-truck:before {
+  content: "\e857";
+}
+.ae-icon-icons2:before {
+  content: "\e880";
+}
+.ae-icon-magnifier:before {
+  content: "\e922";
+}
+.ae-icon-list4:before {
+  content: "\e930";
+}
+.ae-icon-chevron-up:before {
+  content: "\e939";
+}
+.ae-icon-chevron-down:before {
+  content: "\e93a";
+}
+.ae-icon-chevron-left:before {
+  content: "\e93b";
+}
+.ae-icon-chevron-right:before {
+  content: "\e93c";
+}
+.ae-icon-chevrons-expand-vertical:before {
+  content: "\e93d";
+}
+.ae-icon-chevrons-expand-horizontal:before {
+  content: "\e93e";
+}
+.ae-icon-checkmark-circle:before {
+  content: "\e959";
+}
+.ae-icon-cross-circle:before {
+  content: "\e95a";
+}
+.ae-icon-plus-circle:before {
+  content: "\e95b";
+}
+.ae-icon-circle-minus:before {
+  content: "\e95c";
+}
+.ae-icon-arrow-down-circle:before {
+  content: "\e95f";
+}
+.ae-icon-arrow-left-circle:before {
+  content: "\e960";
+}
+.ae-icon-arrow-right-circle:before {
+  content: "\e961";
+}
+.ae-icon-chevron-up-circle:before {
+  content: "\e962";
+}
+.ae-icon-chevron-down-circle:before {
+  content: "\e963";
+}
+.ae-icon-chevron-left-circle:before {
+  content: "\e964";
+}
+.ae-icon-chevron-right-circle:before {
+  content: "\e965";
+}
+.ae-icon-chevron-up-square:before {
+  content: "\e995";
+}
+.ae-icon-chevron-down-square:before {
+  content: "\e996";
+}
+.ae-icon-chevron-left-square:before {
+  content: "\e997";
+}
+.ae-icon-chevron-right-square:before {
+  content: "\e998";
+}
