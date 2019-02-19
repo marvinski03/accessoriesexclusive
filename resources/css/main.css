@@ -208,33 +208,26 @@ span#warenkorb-qty {
     padding-top: 171px;
   }
 
-  .nav > li.active > a,
-  .nav > li:hover > a {
-      box-shadow: none !important;
-      border-color: white !important;
-      color: #5d5d5d;
-  }
-
-  body.scroll-header header {
-    position: fixed;
+  body.scroll-header header#page-header {
+    position: fixed !important;
     z-index: 999;
     background: white;
     width: 100%;
     top: -125px;
   }
 
-  body.scroll-header header .scroll-down-logo{
+  body.scroll-header header#page-header .scroll-down-logo{
     display: inline-block;
     float: left;
     margin-top: 5px;
     margin-right:10px;
   }
 
-  body.scroll-header header .cat-welcome{
+  body.scroll-header header#page-header .cat-welcome{
     display: none;
   }
 
-   body.scroll-header header .mainNavigation > .navbar-nav{
+   body.scroll-header header#page-header .mainNavigation > .navbar-nav{
     float: left;
     clear: none;
    }

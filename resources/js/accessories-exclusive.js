@@ -1,6 +1,6 @@
 $(document).ready(function() {
 	function setHeader(){
-		if( $(document).scrollTop() > 160){
+		if( $(document).scrollTop() > 158){
 			if(!($("body").hasClass("scroll-header"))){
 				$("body").addClass("scroll-header");
 			}
