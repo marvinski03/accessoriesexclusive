@@ -29,6 +29,54 @@
 
             </div>
         </div>
+
+        <div id="main-head">
+
+            <div class="container header-content">
+                <div class="row">
+                    <div class="col-md-4 txt-left hidden-sm hidden-xs">
+                        <a href="{% Link_MyAccount() %}" title="Mein Konto">
+                            <div class="header-item-wrapper">
+                                <i class="ae-icon-user"></i><br>
+                                <span>Mein Konto</span>
+                            </div>
+                        </a>
+                        <a href="{% Link_Contact() %}" title="Kontakt">
+                            <div class="header-item-wrapper">
+                                <i class="ae-icon-bubble"></i><br>
+                                <span>Kontakt</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-md-4 col-xs-6 txt-center logo-wrapper">
+                        <a href="{% Link_Home() %}">
+                            <img src="/layout/callisto_3/img/accessories-exclusive-logo.svg" alt="Accessories Exclusive" title="Accessories Exclusive" width="203" height="50"/>
+                        </a>
+                    </div>
+                    <div class="col-md-4 txt-right hidden-sm hidden-xs">
+                        <a href="{% Link_ItemWishlist() %}" title="Wunschliste">
+                            <div class="header-item-wrapper">
+                                <i class="ae-icon-heart"></i><br>
+                                <span>Wunschliste</span>
+                            </div>
+                        </a>
+                        <a href="{% Link_Basket() %}" title="Warenkorb">
+                            <div class="header-item-wrapper">
+                                {% if $BasketItemQuantity > 0 %}<span id="warenkorb-qty">$BasketItemQuantity</span>{% endif; %}
+                                <i class="ae-icon-cart"></i><br>
+                                <span>Warenkorb</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-xs-6 hidden-md hidden-lg mobile-menu">
+                        <button id="btnMainMenuToggler" v-open-mobile-navigation class="navbar-toggler d-lg-none" type="button">
+                             &#9776;
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
         {% include "CeresCoconut::PageDesign.Partials.Header.Navigation" %}
     </div>
 </header>
