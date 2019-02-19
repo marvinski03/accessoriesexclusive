@@ -1,32 +1,32 @@
 /* Enter your CSS here */
 
-div#ae-top-bar {
+#ae-top-bar {
     background: #f1f1f1;
     border-bottom: 1px solid #d8d8d8;
     padding: 5px 0px;
 }
 
-div#ae-top-bar *{
+#ae-top-bar *{
   color: #828282 !important;
 }
 
-div#ae-top-bar ul {
+#ae-top-bar ul {
     list-style:none;
     margin: 0px;
     padding: 0px;
 }
 
-div#ae-top-bar ul li{
+#ae-top-bar ul li{
     display:inline-block;
     width: calc(25% - 5px);
     text-align: center;
 }
 
-div#ae-top-bar ul li:first-of-type{
+#ae-top-bar ul li:first-of-type{
    text-align:left;
 }
 
-div#ae-top-bar ul li:last-of-type{
+#ae-top-bar ul li:last-of-type{
    text-align:right;
 }
 
