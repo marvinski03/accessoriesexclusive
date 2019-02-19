@@ -7,15 +7,6 @@
 <nav class="navbar{% if useMegaMenu %} megamenu{%endif%}">
     <div class="container-max">
         <div class="row">
-            <div class="brand-wrapper" {% if showHeaderNavBar == "side" %}style="position: relative"{% endif %}>
-                <a class="navbar-brand float-lg-left" href="{{ homepageURL }}">
-                    {% if ('http' in companyLogo) or ('layout/' in companyLogo) %}
-                        <img alt="{{ companyName }}" src="{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                    {% else %}
-                        <img alt="{{ companyName }}" src="{{ plugin_path('Ceres') }}/{{ companyLogo }}" class="img-fluid" crossorigin="anonymous" />
-                    {% endif %}
-                </a>
-            </div>
 
             <div id="mainNavbarCollapsable">
                 <ul class="breadcrumb">
@@ -24,6 +15,33 @@
                 {% if showHeaderNavBar == "top" or showHeaderNavBar == "both" or not services.template.isCategory() %}
                     {# includeCached('Ceres::PageDesign.Partials.Header.NavigationList.twig') #}
                     {% include "Ceres::PageDesign.Partials.Header.NavigationList" %}
+
+                    <div class="search-box-inner">
+                        <div class="search-box-shadow-frame">
+                            <input type="search" class="search-input" ref="searchInput" @input="autocomplete($event.target.value)"
+                                @keyup.enter="prepareSearch()" @keyup.down="keydown()" @keyup.up="keyup()"
+                                @focus="isSearchFocused = true" @blur="setIsSearchFocused(false)"
+                                autofocus>
+
+                            <button class="search-submit" type="submit" @click="search()">
+                                <i class="fa fa-search sm-up"></i>
+                            </button>
+
+                            <div class="autocomplete-suggestions" v-if="isSearchFocused && autocompleteResult.length">
+                                <div class="autocomplete-suggestion" v-for="(item, index) in autocompleteResult" :key="index" @mousedown="selectAutocompleteItem(item)" :class="{ 'autocomplete-selected': selectedAutocompleteIndex === index }">
+                                    <div class="autocomplete-image-container" v-if="showItemImages">
+                                        <img class="autocomplete-image" :src="item.img">
+                                    </div>
+                                    <div class="autocomplete-item-name" v-html="item.displayName"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div id="search-toggle">
+                        <i class="ae-icon-magnifier"></i>
+                        <i class="ae-icon-cross-circle"></i>
+                    </div>
                 {% endif %}
             </div>
 

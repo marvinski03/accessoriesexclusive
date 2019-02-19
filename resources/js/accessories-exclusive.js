@@ -16,4 +16,11 @@ jQuery(document).ready(function() {
 	jQuery(document).scroll(function() {
 	    setHeader();
 	});
+
+
+	jQuery("#search-toggle").click(function(){
+		jQuery("header").toggleClass("activeSearch");
+		jQuery("#flAutocompleteInputText").focus();
+	});
+
 });

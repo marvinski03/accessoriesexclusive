@@ -200,6 +200,45 @@ span#warenkorb-qty {
     text-align: center;
 }
 
+.search-box-inner{
+	display: none;
+}
+
+header.activeSearch .search-box-inner{{
+	display: block;
+}
+
+#search-toggle{
+position: absolute;
+right: 0px;
+top: -2px;
+display: block;
+width: 49px;
+height: 44px;
+text-align: center;
+line-height: 54px;
+border-left: 1px solid #d1d1d1;
+border-right: 1px solid #d1d1d1;
+cursor: pointer;
+}
+
+#search-toggle .ae-icon-magnifier{display: inline;}
+#search-toggle .ae-icon-cross-circle{display: none;}
+.content_search_form{display: none;}
+
+#search-toggle:hover{
+  background: #f1f1f1;
+}
+
+#search-toggle i {
+  font-size: 20px;
+}
+
+header.activeSearch #search-toggle .ae-icon-magnifier{display: none;}
+header.activeSearch #search-toggle .ae-icon-cross-circle{display: inline;}
+header.activeSearch .content_search_form{display: block;}
+
+
 /** SCROLL HEADER **/
 
   .scroll-down-logo{display: none;}
