@@ -211,10 +211,10 @@ header.activeSearch .search-box-inner{
 #search-toggle{
 position: absolute;
 right: 0px;
-top: -2px;
+top: -1px;
 display: block;
 width: 49px;
-height: 44px;
+height: 42px;
 text-align: center;
 line-height: 54px;
 border-left: 1px solid #d1d1d1;
