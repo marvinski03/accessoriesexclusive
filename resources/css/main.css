@@ -1,4 +1,18 @@
-/* Enter your CSS here */
+/* icon fonts */
+
+@font-face {
+  font-family: 'accessories-exclusive';
+  src:  url('https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/fonts/accessories-exclusive.eot?e6qs8p');
+  src:  url('https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/fonts/accessories-exclusive.eot?e6qs8p#iefix') format('embedded-opentype'),
+    url('https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/fonts/accessories-exclusive.ttf?e6qs8p') format('truetype'),
+    url('https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/fonts/accessories-exclusive.woff?e6qs8p') format('woff'),
+    url('https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/fonts/accessories-exclusive.svg?e6qs8p#accessories-exclusive') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+/* TOP BAR */
 
 #ae-top-bar {
     background: #f1f1f1;
