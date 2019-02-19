@@ -75,13 +75,21 @@ body{
     line-height: 150%;
 }
 
+div#vue-app{
+	margin-top: 0px !important;
+	background: white;
+}
+
+header#page-header {
+    position: inherit !important;
+}
+
 
 /* TOP BAR */
 
 #ae-top-bar {
     background: #f1f1f1;
-    border-bottom: 1px solid #d8d8d8;
-    padding: 5px 0px;
+    padding-top: 5px;
 }
 
 #ae-top-bar .top-bar-container ul {
@@ -192,6 +200,45 @@ span#warenkorb-qty {
     text-align: center;
 }
 
+/** SCROLL HEADER **/
+
+  .scroll-down-logo{display: none;}
+
+  body.scroll-header{
+    padding-top: 171px;
+  }
+
+  .nav > li.active > a,
+  .nav > li:hover > a {
+      box-shadow: none !important;
+      border-color: white !important;
+      color: #5d5d5d;
+  }
+
+  body.scroll-header header {
+    position: fixed;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    top: -125px;
+  }
+
+  body.scroll-header header .scroll-down-logo{
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    margin-right:10px;
+  }
+
+  body.scroll-header header .cat-welcome{
+    display: none;
+  }
+
+   body.scroll-header header .mainNavigation > .navbar-nav{
+    float: left;
+    clear: none;
+   }
+
 
 /** NAV BAR **/
 
@@ -216,6 +263,14 @@ nav.navbar {
 #mainNavbarCollapsable ul.mainmenu>li.ddown>a:after {
     display: none;
 }
+
+
+/** CONTENT **/
+
+div#page-body {
+    padding-top: 30px;
+}
+
 
 
 
