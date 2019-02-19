@@ -35,13 +35,25 @@
             <div class="container header-content">
                 <div class="row">
                     <div class="col-md-4 txt-left hidden-sm hidden-xs">
-                        <a href="{% Link_MyAccount() %}" title="Mein Konto">
+
+
+                        <a data-toggle="modal" href="{% if services.template.isCurrentTemplate("tpl.login") %}javascript:void(0){% else %}#login{% endif %}" @click="unmarkInputFields()" v-if="!isLoggedIn">
+                            <div class="header-item-wrapper">
+                                <i class="ae-icon-user"></i><br>
+                                <span>Anmelden</span>
+                            </div>
+                        </a>
+
+                        <a href="{{ urls.myAccount }}" v-if="isLoggedIn">
                             <div class="header-item-wrapper">
                                 <i class="ae-icon-user"></i><br>
                                 <span>Mein Konto</span>
                             </div>
                         </a>
-                        <a href="{% Link_Contact() %}" title="Kontakt">
+
+
+
+                        <a href="https://www.accessories-exclusive.de/kontakt" title="Kontakt">
                             <div class="header-item-wrapper">
                                 <i class="ae-icon-bubble"></i><br>
                                 <span>Kontakt</span>
@@ -49,12 +61,12 @@
                         </a>
                     </div>
                     <div class="col-md-4 col-xs-6 txt-center logo-wrapper">
-                        <a href="{% Link_Home() %}">
+                        <a href="{{ homepageURL }}">
                             <img src="/layout/callisto_3/img/accessories-exclusive-logo.svg" alt="Accessories Exclusive" title="Accessories Exclusive" width="203" height="50"/>
                         </a>
                     </div>
                     <div class="col-md-4 txt-right hidden-sm hidden-xs">
-                        <a href="{% Link_ItemWishlist() %}" title="Wunschliste">
+                        <a href="https://www.accessories-exclusive.de/wish-list" title="Wunschliste">
                             <div class="header-item-wrapper">
                                 <i class="ae-icon-heart"></i><br>
                                 <span>Wunschliste</span>
