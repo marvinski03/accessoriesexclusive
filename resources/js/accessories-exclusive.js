@@ -1,19 +1,19 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
 	function setHeader(){
-		if( $(document).scrollTop() > 158){
-			if(!($("body").hasClass("scroll-header"))){
-				$("body").addClass("scroll-header");
+		if( jQuery(document).scrollTop() > 158){
+			if(!(jQuery("body").hasClass("scroll-header"))){
+				jQuery("body").addClass("scroll-header");
 			}
 		}else{
-			if($("body").hasClass("scroll-header")){
-				$("body").removeClass("scroll-header");
+			if(jQuery("body").hasClass("scroll-header")){
+				jQuery("body").removeClass("scroll-header");
 			}
 		}
 	}
 
 	setHeader();
 
-	$(document).scroll(function() {
+	jQuery(document).scroll(function() {
 	    setHeader();
 	});
 });
