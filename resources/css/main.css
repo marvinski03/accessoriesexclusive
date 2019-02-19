@@ -12,6 +12,16 @@
 }
 
 
+/** GENERAL **/
+
+.txt-center{text-align: center;}
+.txt-left{text-align:left;}
+.txt-right{text-align:right;}
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+
+
 /* TOP BAR */
 
 #ae-top-bar {
