@@ -204,7 +204,7 @@ span#warenkorb-qty {
 	display: none;
 }
 
-header.activeSearch .search-box-inner{{
+header.activeSearch .search-box-inner{
 	display: block;
 }
 
