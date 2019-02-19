@@ -62,7 +62,7 @@
                         </a>
                         <a href="{% Link_Basket() %}" title="Warenkorb">
                             <div class="header-item-wrapper">
-                                {% if $BasketItemQuantity > 0 %}<span id="warenkorb-qty">$BasketItemQuantity</span>{% endif; %}
+                                <span id="warenkorb-qty class="badge-right" v-basket-item-quantity="$store.state.basket.data.itemQuantity">0</span>
                                 <i class="ae-icon-cart"></i><br>
                                 <span>Warenkorb</span>
                             </div>
