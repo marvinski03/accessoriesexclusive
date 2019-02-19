@@ -193,6 +193,31 @@ span#warenkorb-qty {
 }
 
 
+/** NAV BAR **/
+
+
+nav.navbar {
+    background: white;
+    text-align: left;
+    border-top: 1px solid #d1d1d1 !important;
+    border-bottom: 1px solid #d1d1d1 !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu {
+    float: left !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu>li.ddown>a {
+    padding: 12px 17px 10px 17px;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#mainNavbarCollapsable ul.mainmenu>li.ddown>a:after {
+    display: none;
+}
+
+
 
 
 /** icon font classes **/
