@@ -39,7 +39,7 @@
 
                         {% if services.customer.getContactId() > 0 %}
 
-                             <a href="{{ urls.myAccount }}" v-if="isLoggedIn">
+                             <a href="{{ urls.myAccount }}">
                                 <div class="header-item-wrapper">
                                     <i class="ae-icon-user"></i><br>
                                     <span>Mein Konto</span>
@@ -48,7 +48,7 @@
 
                         {% else %}
 
-                            <a data-toggle="modal" href="{% if services.template.isCurrentTemplate("tpl.login") %}javascript:void(0){% else %}#login{% endif %}" @click="unmarkInputFields()" v-if="!isLoggedIn">
+                        <a data-toggle="modal" href="#login">
                                 <div class="header-item-wrapper">
                                     <i class="ae-icon-user"></i><br>
                                     <span>Anmelden</span>
