@@ -30,6 +30,10 @@
    text-align:right;
 }
 
+.top-bar{
+	background: none !important;
+}
+
 @media(max-width:1200px){
 	#ae-top-bar ul li:nth-of-type(1){width:20%;}
 	#ae-top-bar ul li:nth-of-type(2){width:30%;}
