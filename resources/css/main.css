@@ -20,15 +20,20 @@
     padding: 5px 0px;
 }
 
-#ae-top-bar *{
-  color: #828282 !important;
-}
-
 #ae-top-bar ul {
     list-style:none;
     margin: 0px;
     padding: 0px;
    width: 100%;
+}
+
+#ae-top-bar .top-bar-container *{
+	color: #828282 !important;
+    font-size: 12px !important;
+}
+
+#ae-top-bar .row {
+    padding: 4px 0px 8px 0px;
 }
 
 #ae-top-bar ul li{
