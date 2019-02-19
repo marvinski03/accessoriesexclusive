@@ -27,7 +27,7 @@
                             </button>
 
                             <div class="autocomplete-suggestions">
-                                <div class="autocomplete-suggestion" :key="index" @mousedown="selectAutocompleteItem(item)" :class="{ 'autocomplete-selected': selectedAutocompleteIndex === index }">
+                                <div class="autocomplete-suggestion">
                                     <div class="autocomplete-image-container" v-if="showItemImages">
                                         <img class="autocomplete-image" :src="item.img">
                                     </div>
