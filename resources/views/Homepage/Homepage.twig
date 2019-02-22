@@ -16,13 +16,21 @@
           content="{% if ('http' in companyLogo) or ('layout/' in companyLogo) %}{{ companyLogo }}{% else %}{{ plugin_path('Ceres') }}/{{ companyLogo }}{% endif %}"/>
 
     <script type="application/ld+json">
-        {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}/search?query={search_term}","query-input": "required name=search_term"}}
+        {"@context": "http://schema.org","@type": "WebSite","url": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}","potentialAction":{"@type": "SearchAction","target": "{{ services.webstoreConfig.getWebstoreConfig().domainSsl }}/search?query={search_term}","query-input": "required name=search_ter	"}}
     </script>
 
     <title>{{ companyName }}</title>
 {% endblock %}
 
 {% block PageBody %}
+
+ <div class="home container-max">
+        <div class="row">
+            <div class="col">
+           	 	HOMEPAGE
+            </div>
+        </div>
+    </div>
 
     {% if ceresConfig.homepage.showShopBuilderContent or request.get('isContentBuilder') == 1 %}
 
