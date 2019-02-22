@@ -286,6 +286,16 @@ nav.navbar {
     float: left !important;
 }
 
+#mainNavbarCollapsable ul.mainmenu *{
+    background: white;
+    color: #4D4F4D !important;
+}
+
+#mainNavbarCollapsable ul.mainmenu *:hover{
+    background: white;
+    color:#4D4F4D;
+}
+
 #mainNavbarCollapsable ul.mainmenu>li.ddown>a {
     padding: 12px 17px 10px 17px;
     font-size: 15px;
