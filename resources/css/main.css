@@ -321,8 +321,9 @@ li.ddown > ul > li > a {
     min-height: 58px;
 }
 
-li.ddown > ul > li > a:hover {
-  color: black !important;
+#mainNavbarCollapsable ul.mainmenu a:hover {
+    color: black !important;
+    font-weight: bold;
 }
 
 #mainNavbarCollapsable ul.mainmenu>li>ul {
