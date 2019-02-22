@@ -310,7 +310,7 @@ li.ddown > ul {
     columns: 2;
     column-gap: 0px;
     break-inside: avoid-column !important;
-    padding-bottom: 19px !important;
+    padding-bottom: 9px !important;
 }
 li.ddown > ul li {
    break-inside: avoid-column;
