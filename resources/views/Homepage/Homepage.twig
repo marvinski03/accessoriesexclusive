@@ -116,7 +116,13 @@
 		<div class="row margin-top-3">
 			<span class="title custom-margin">Neu im Sortiment</span>
 			<div class="categoryView isGridView neue-produkte-wrapper">
-				LETZTE ITEMS
+				{% if ceresConfig.homepage.showShopBuilderContent or request.get('isContentBuilder') == 1 %}
+
+		            {% for content in container("Ceres::Homepage") if content.plugin == "Plenty" %}
+                        {{ content.result|raw }}
+                    {% endfor %}
+
+			    {% else %}
 			</div>
 		</div>
 	</div>
