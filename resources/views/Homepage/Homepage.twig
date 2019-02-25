@@ -115,7 +115,7 @@
 	<div class="container-max">
 		<div class="row margin-top-3">
 			<span class="title custom-margin">Neu im Sortiment</span>
-			<div class="categoryView isGridView neue-produkte-wrapper">
+			<div class="col">
 
 		            {% for content in container("Ceres::Homepage") if content.plugin == "Plenty" %}
                         {{ content.result|raw }}
