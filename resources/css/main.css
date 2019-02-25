@@ -544,6 +544,7 @@ span.ae-slide-button:hover{
     background: none !important;
     height: 67px !important;
     width: 36px !important;
+    top: calc(50% - 34px);
 }
 
 .ae-front .carousel-control-next{
