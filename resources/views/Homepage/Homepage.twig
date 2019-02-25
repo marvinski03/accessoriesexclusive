@@ -442,30 +442,7 @@
 
 	</script>
 
-    {% if ceresConfig.homepage.showShopBuilderContent or request.get('isContentBuilder') == 1 %}
 
-        <div class="home container-max">
-            <div class="row">
-                <div class="col">
-                HOMEPAGE
-                    {% for content in container("Ceres::Homepage") if content.plugin == "Plenty" %}
-                        {{ content.result|raw }}
-                    {% endfor %}
-                </div>
-            </div>
-        </div>
-
-    {% else %}
-
-        {% if showDefaultHomepage == "true" %}
-            {% include 'Ceres::Homepage.MarketingHomepage.twig' %}
-        {% else %}
-            {% block ThemeHomepage %}
-                {% include 'Ceres::Homepage.DefaultHomepage.twig' %}
-            {% endblock %}
-        {% endif %}
-
-    {% endif %}
 
 
 
