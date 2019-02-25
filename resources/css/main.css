@@ -875,6 +875,33 @@ button.slick-next.slick-arrow:before{content: "\e93c";}
   display: inline-block;
 }
 
+.marken-slider .carousel-inner > .item {
+  transition: 500ms ease-in-out left;
+}
+.marken-slider .carousel-inner .active.left {
+  left: -33%;
+}
+.marken-slider .carousel-inner .active.right {
+  left: 33%;
+}
+.marken-slider .carousel-inner .next {
+  left: 33%;
+}
+.marken-slider .carousel-inner .prev {
+  left: -33%;
+}
+@media all and (transform-3d), (-webkit-transform-3d) {
+  .marken-slider .carousel-inner > .item {
+    transition: 500ms ease-in-out left;
+    transition: 500ms ease-in-out all;
+    backface-visibility: visible;
+    transform: none !important;
+  }
+}
+.marken-slider .carouse-control.left, .marken-slider .carouse-control.right {
+  background-image: none;
+}
+
 
 
 

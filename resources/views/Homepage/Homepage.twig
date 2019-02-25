@@ -342,55 +342,58 @@
 		</div>
 
 		<div class="container">
-			<div class="row">
-				<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-					<div class="marken-slider">
-						<div class="item">
+		<div class="row">
+			<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+				<div class="marken-slider carousel slide">
+					<div class="carousel-inner">
+
+
+						<div class="carousel-item active">
 							<a href="https://www.accessories-exclusive.de/marken/brax-feel-good/">
 								<img alt="Brax" src="/documents/category/328/preview/brax-feel-good.jpg" title="Brax" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/bruno-banani/">
 								<img alt="Bruno Banani" src="/documents/category/328/preview/bruno-banani.jpg" title="Bruno Banani" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/bugatti/">
 								<img alt="Bugatti" src="/documents/category/328/preview/bugatti.jpg" title="Bugatti" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/g-chabrolle/">
 								<img alt="G Chabrolle" src="/documents/category/328/preview/g-chabrolle.jpg" title="G Chabrolle" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/lindenmann/">
 								<img alt="Lindenmann" src="/documents/category/328/preview/lindenmann.jpg" title="Lindenmann" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/mano/">
 								<img alt="Mano" src="/documents/category/328/preview/mano.jpg" title="Mano" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/otto-kern/">
 								<img alt="Otto Kern" src="/documents/category/328/preview/otto-kern.jpg" title="Otto Kern" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/pierre-cardin/">
 								<img alt="Pierre Cardin" src="/documents/category/328/preview/pierre-cardin.jpg" title="Pierre Cardin" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/the-art-of-belt/">
 								<img alt="The Art of Belt" src="/documents/category/328/preview/the-art-of-belt.jpg" title="The Art of Belt" />
 							</a>
 						</div>
-						<div class="item">
+						<div class="carousel-item">
 							<a href="https://www.accessories-exclusive.de/marken/wenger/">
 								<img alt="Wenger" src="/documents/category/328/preview/wenger.jpg" title="Wenger" />
 							</a>
@@ -401,6 +404,7 @@
 			</div>
 		</div>
 	</div>
+</div>
 
 	<script>
 		$(document).ready(function(){
@@ -409,6 +413,28 @@
 				$("#yt-video-anleitung").css("display","block");
 			});
 		});
+
+		// Instantiate the Bootstrap carousel
+		$('.marken-slider').carousel({
+		  interval: false
+		});
+
+		// for every slide in carousel, copy the next slide's item in the slide.
+		// Do the same for the next, next item.
+		$('.marken-slider .item').each(function(){
+		  var next = $(this).next();
+		  if (!next.length) {
+		    next = $(this).siblings(':first');
+		  }
+		  next.children(':first-child').clone().appendTo($(this));
+		  
+		  if (next.next().length>0) {
+		    next.next().children(':first-child').clone().appendTo($(this));
+		  } else {
+		  	$(this).siblings(':first').children(':first-child').clone().appendTo($(this));
+		  }
+		});
+
 	</script>
 
     {% if ceresConfig.homepage.showShopBuilderContent or request.get('isContentBuilder') == 1 %}
