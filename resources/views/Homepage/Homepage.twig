@@ -30,24 +30,32 @@
 			<div class="col-lg-8 col-md-7">
 					
 
-					<div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
-        <div class="carousel-inner" id="carousel-content">
-            {% for picture in homepageData.pictures %}
-                <div class="carousel-item text-muted {% if loop.first %}active{% endif %}">
-                    <a href="{{ picture.pictureLink }}">
-                        <img class="img-fluid" src="{{ picture.pictureUrl }}" />
-                    </a>
-                    <div class="carousel-caption">
-                        <h2>{% autoescape false %}{{ picture.text }}{% endautoescape %}</h2>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <a class="left carousel-control carousel-control-prev" href="#carousel-example" data-slide="prev"><i
-                    class="icon-prev  fa fa-angle-left"></i></a>
-        <a class="right carousel-control carousel-control-next" href="#carousel-example" data-slide="next"><i
-                    class="icon-next fa fa-angle-right"></i></a>
-    </div>
+				<div class="carousel slide" data-interval="5000" data-ride="carousel" id="carousel-example">
+			        <div class="carousel-inner" id="carousel-content">
+			            
+			                <div class="carousel-item text-muted active">
+			                    <a href="https://www.accessories-exclusive.de/marken/lindenmann/">
+			                        <img class="img-fluid" src="http://www.accessories-exclusive.de/documents/category/328/contemporary.jpg" />
+			                    </a>
+			                    
+			                    <div class="ae-slide-text">
+									<a href="https://www.accessories-exclusive.de/marken/lindenmann/">
+										<span class="ae-slide-text-top">Lindenmann</span>
+										<span class="ae-slide-text-bottom">Jetzt die neue Kollektion entdecken</span>
+										<span class="ae-slide-button">Artikel ansehen</span>
+									</a>
+								</div>
+			                    	
+			                </div>
+			            
+			        </div>
+
+		        <a class="left carousel-control carousel-control-prev" href="#carousel-example" data-slide="prev"><i
+		                    class="icon-prev  fa fa-angle-left"></i></a>
+		        <a class="right carousel-control carousel-control-next" href="#carousel-example" data-slide="next"><i
+		                    class="icon-next fa fa-angle-right"></i></a>
+
+		    </div>
 
 
 			</div>
