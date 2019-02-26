@@ -83,12 +83,12 @@
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                 <span class="footer-title">Einkaufen</span>
                 <ul class="footerList">
-                    <li><a href="{% Link_PaymentMethods() %}">Zahlungsarten</a></li>
-                    <li><a href="{% Link_ShippingCosts() %}">Versandarten & -kosten</a></li>
-                    <li><a href="{% Link_CancellationRights() %}">Widerrufsrecht</a></li>
-                    <li><a href="{% Link_Basket() %}">Warenkorb</a></li>
-                    <li><a href="{% if( $CustomerID ) { Link_Checkout(3); } else { Link_Checkout(2); } %}">Zur Kasse</a></li>
-                    <li><a href="{% Link_Help() %}">Hilfe</a></li>
+                    <li><a href="#">Zahlungsarten</a></li>
+                    <li><a href="#">Versandarten & -kosten</a></li>
+                    <li><a href="#">Widerrufsrecht</a></li>
+                    <li><a href="#">Warenkorb</a></li>
+                    <li><a href="#">Zur Kasse</a></li>
+                    <li><a href="#">Hilfe</a></li>
                 </ul>
             </div>
             
@@ -97,12 +97,12 @@
                 <span class="footer-title">Mein Konto</span>
                 <ul class="footerList">
                     {% if ! $IsCustomerLoggedIn %}
-                        <li><a href="{% Link_CustomerRegistration() %}">Registrieren</a></li>
-                        <li><a href="{% Link_MyAccount() %}">Login</a></li>
+                        <li><a href="#">Registrieren</a></li>
+                        <li><a href="#">Login</a></li>
                     {% else %}
-                        <li><a href="{% Link_MyAccount() %}">Auftragsübersicht</a></li>
-                        <li><a href="{% Link_Watchlist() %}">Mein Merkzettel</a></li>
-                        <li><a href="{% Link_ItemWishlist() %}">Meine Wunschliste</a></li>
+                        <li><a href="#">Auftragsübersicht</a></li>
+                        <li><a href="#">Mein Merkzettel</a></li>
+                        <li><a href="#">Meine Wunschliste</a></li>
                     {% endif %}
                 </ul>
             </div>
@@ -111,10 +111,10 @@
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                 <span class="footer-title">Unternehmen</span>
                 <ul class="footerList">
-                    <li><a href="{% Link_Contact() %}">Kontakt</a></li>
-                    <li><a href="{% Link_PrivacyPolicy() %}">Datenschutzerklärung</a></li>
-                    <li><a href="{% Link_TermsConditions() %}">AGB</a></li>
-                    <li><a href="{% Link_LegalDisclosure() %}">Impressum</a></li>
+                    <li><a href="#">Kontakt</a></li>
+                    <li><a href="#">Datenschutzerklärung</a></li>
+                    <li><a href="#">AGB</a></li>
+                    <li><a href="#">Impressum</a></li>
                 </ul>
             </div>
             
