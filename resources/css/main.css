@@ -1037,6 +1037,10 @@ div#newsletter {
     top: -1.5px;
 }
 
+#newsletter .form-group {
+    margin-right: 4px;
+}
+
 @media (min-width: 768px)
 [class*="form-block-"][class*="-button"]:not(.break-sm) .form-group {
     padding-right: 8px;
