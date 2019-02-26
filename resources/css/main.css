@@ -257,7 +257,7 @@ header.activeSearch .content_search_form{display: block;}
 
   body.scroll-header header#page-header {
     position: fixed !important;
-    z-index: 999;
+    z-index: 9999;
     background: white;
     width: 100%;
     top: -158px;
