@@ -1021,6 +1021,22 @@ footer .row > div {
   }
 }
 
+div#newsletter {
+    padding: 40px 10px;
+    margin-top: 30px;
+    background: #f6f6f6;
+}
+
+#newsletter form {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+#newsletter span.glyphicon.glyphicon-arrow-right {
+    position: relative;
+    top: -1.5px;
+}
+
 
 
 /** icon font classes **/
