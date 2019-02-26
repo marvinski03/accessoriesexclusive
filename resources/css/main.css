@@ -1055,6 +1055,12 @@ ul.footerList {
     padding-left: 0px;
 }
 
+/** KATEGORIEN **/
+
+.page-content{
+  background: none !important;
+}
+
 
 
 /** icon font classes **/
