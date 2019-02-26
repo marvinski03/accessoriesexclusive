@@ -9,146 +9,133 @@
 {% set footerContainer = LayoutContainer.show("Ceres::Footer") | trim %}
 {% if footerContainer is empty %}
 
-<div class="footer">
+<footer>
 
-    <div class="{% if topButtonPosition == "right" %}back-to-top{% else %}back-to-top-center{% endif %} hidden-sm-down">
-        <i class="fa fa-chevron-up"></i>
-    </div>
-
-    <div class="to-top d-md-none" v-scroll-to-top>
-        <i class="fa fa-arrow-up" aria-hidden="true"></i>
-    </div>
-
-    {% if numberOfFeatures > 0 %}
-        <div class="footer-features py-3 container-max">
-            <div class="row">
-                {% for i in 1..numberOfFeatures %}
-                    <div class="col-12 col-sm-4 text-center">
-                        <i class="fa fa-check text-success" aria-hidden="true"></i>
-                        {{ trans('Ceres::Template.footerStoreFeature' ~ i) }}
-                    </div>
-                {% endfor %}
-            </div>
-        </div>
-    {% endif %}
-
-
-    <div class="container-max footer-content">
+    <div class="container">
+        <h4 class="custom-margin">Sicherheit und Komfort in unserem Onlineshop</h4>
         <div class="row">
-            <div class="col-12">
-                <div class="footer-services mt-4">
-                    {% set paymentMethodContent = LayoutContainer.show("Ceres::Homepage.PaymentMethods") %}
-                    {% if paymentMethodContent|trim is not empty %}
-                        <div class="services-payment mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerPaymentMethods") }}</strong>
-                            {{ paymentMethodContent }}
-                        </div>
-                    {% endif %}
-                    {% set shippingContent = LayoutContainer.show("Ceres::Homepage.Shipping") %}
-                    {% if shippingContent|trim is not empty %}
-                        <div class="services-shipping mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerOrderShippedBy") }}</strong>
-                            {{ shippingContent }}
-                        </div>
-                    {% endif %}
-                    {% set certifiedContent = LayoutContainer.show("Ceres::Homepage.Certified") %}
-                    {% if certifiedContent|trim is not empty %}
-                        <div class="services-certificate mb-3">
-                            <strong class="services-title">{{ trans("Ceres::Template.footerCertifiedBy") }}</strong>
-                            {{ certifiedContent }}
-                        </div>
-                    {% endif %}
+            <div class="col-md-4">
+                <div class="shop-sicherheit-komfort">
+                    <i class="ae-icon-rocket"></i>
+                    <span>Sicherer und schneller Versand</span>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/dhl-logo.png" alt="DHL" title="DHL"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="shop-sicherheit-komfort">
+                    <i class="ae-icon-bag-euro"></i>
+                    <span>Viele Zahlungsmöglichkeiten</span>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/paypal-plus.png" alt="PayPal Plus" title="PayPal Plus"/>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/ec.png" alt="Banküberweisung" title="Banküberweisung"/>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/amazon-payments.png" alt="Amazon Payments" title="Amazon Payments"/>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="shop-sicherheit-komfort">
+                    <i class="ae-icon-shield-check"></i>
+                    <span>Käuferschutz & Datensicherheit</span>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/ssl-siegel.png" alt="SSL" title="SSL"/>
+                    <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/trusted-shops-siegel.png" alt="Trusted Shops" title="Trusted Shops"/>
                 </div>
             </div>
         </div>
-        
+    </div>
+
+    <div class="container" id="newsletter">
         <div class="row">
-            <hr class="my-4">
-            {% for i in 1..numberOfCols %}
-                <div class="col-6 col-sm-3 col-lg-2">
-                    <nav class="footer-column mb-4">
-                        <h2 class="h5">{{ trans('Ceres::Template.footerColumnTitle' ~ i) }}</h2>
-                        <ul class="list-unstyled">
-
-                            {% set footerCategories = config('Ceres.footer.col_' ~ i ~ '_categories') | find("[0-9]+") %}
-                            {% for catID in footerCategories %}
-
-                                {% set cat = services.category.get(catID, lang) %}
-
-                                {% if cat is not null %}
-                                    {% set displayedCategories = displayedCategories | merge([catID]) %}
-                                    <li>
-                                        <a href="{{ services.category.getURL( cat ) }}">
-                                            {{ cat.details.first.name }}</a>
-                                    </li>
-                                {% endif %}
-
-                            {% endfor %}
-
-                        </ul>
-                    </nav>
-                </div>
-            {% endfor %}
-            <hr class="d-sm-none my-4">
-            <div class="col-6 col-sm-3">
-                <div class="footer-column">
-                    {{ LayoutContainer.show("Ceres::Footer.RowOne") }}
-                </div>
+            <div class="col-lg-12 col-md-10 col-sm-12 col-xs-12">
+                <h4>Gerne halten wir Sie auf dem Laufenden</h4>
+                
+                <form class="form-inline form-block-4-button p" method="post" action="https://www.accessories-exclusive.de/content/startseite/" data-plenty="submit:Validator.validate(this, 'has-error')">
+                    <input name="ActionCall" value="WebActionSendCmsForm" type="hidden">
+                    <input name="FormID" value="-1" type="hidden">
+                    <input name="BranchId" value="$CurrentCategoryId" type="hidden">
+                    <div class="form-group">
+                        <label class="sr-only" for="newsletterFirstName">Vorname</label>
+                        <input class="form-control" id="newsletterFirstName" type="text" name="FormFields[0]" placeholder="Vorname">
+                    </div><!--
+                    --><div class="form-group">
+                        <label class="sr-only" for="newsletterLastName">Nachname</label>
+                        <input class="form-control" id="newsletterLastName" type="text" name="FormFields[1]" placeholder="Nachname">
+                    </div><!--
+                    --><div class="form-group">
+                        <label class="sr-only" for="newsletterEmail">E-Mail-Adresse</label>
+                        <input class="form-control" id="newsletterEmail" type="email" name="FormFields[2]" placeholder="E-Mail-Adresse *" data-plenty-validate="mail">
+                    </div><!--
+                    --><button class="btn btn-primary" type="submit">
+                        <span class="">Newsletter abonnieren </span><span class="glyphicon glyphicon-arrow-right"></span>
+                    </button>
+                </form>
+                
             </div>
-            <div class="col-12 col-sm-3">
-                <div class="footer-column row">
-                    {% set rowTwo = LayoutContainer.show("Ceres::Footer.RowTwo") %}
-                    
-                    {{ rowTwo }}
+        </div>
+    </div>
 
-                    <div class="col-12{% if rowTwo|trim is not empty %} col-sm-6 col-lg-12{% endif %}">
-                        {{ LayoutContainer.show("Ceres::Footer.RowThree") }}
-                    </div>
-                </div>
+
+    <div class="container margin-top-3">
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                <img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/accessories-exclusive-logo.svg" alt="Accessories Exclusive" title="Accessories Exclusive" width="155" height="40" id="footer-logo"/><br>
+                &copy; 2018 Accessories Exclusive.<br>All Rights reserved.
             </div>
-        </div>            
-
-        {% set cat = services.category.get(config('Ceres.global.category.legal_disclosure')) %}
-        <div class="copyright text-center my-3">
-            <div class="static-link-list">
-                {% autoescape false %}
-                    <a href="{{ urls.cancellationRights }}">{{ trans("Ceres::Template.footerCancellationRight", {"hyphen": "&shy;"}) }}</a>
-                    {% if config("Ceres.footer.cancellation_use_pdf") == "true" %}
-                        <a href="{{ config('Ceres.footer.cancellation_pdf_path') }}" target="_blank">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
+            
+            
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <span class="footer-title">Einkaufen</span>
+                <ul class="footerList">
+                    <li><a href="{% Link_PaymentMethods() %}">Zahlungsarten</a></li>
+                    <li><a href="{% Link_ShippingCosts() %}">Versandarten & -kosten</a></li>
+                    <li><a href="{% Link_CancellationRights() %}">Widerrufsrecht</a></li>
+                    <li><a href="{% Link_Basket() %}">Warenkorb</a></li>
+                    <li><a href="{% if( $CustomerID ) { Link_Checkout(3); } else { Link_Checkout(2); } %}">Zur Kasse</a></li>
+                    <li><a href="{% Link_Help() %}">Hilfe</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <span class="footer-title">Mein Konto</span>
+                <ul class="footerList">
+                    {% if ! $IsCustomerLoggedIn %}
+                        <li><a href="{% Link_CustomerRegistration() %}">Registrieren</a></li>
+                        <li><a href="{% Link_MyAccount() %}">Login</a></li>
                     {% else %}
-                        <a href="{{ urls.cancellationForm }}">{{ trans("Ceres::Template.footerCancellationForm", {"hyphen": "&shy;"}) }}</a>
+                        <li><a href="{% Link_MyAccount() %}">Auftragsübersicht</a></li>
+                        <li><a href="{% Link_Watchlist() %}">Mein Merkzettel</a></li>
+                        <li><a href="{% Link_ItemWishlist() %}">Meine Wunschliste</a></li>
                     {% endif %}
-                    <a href="{{ urls.legalDisclosure }}">{{ trans("Ceres::Template.footerLegalDisclosure") }}</a>
-                    <a href="{{ urls.privacyPolicy }}">{{ trans("Ceres::Template.footerPrivacyPolicy", {"hyphen": "&shy;"}) }}</a>
-                    <a href="{{ urls.gtc }}">{{ trans("Ceres::Template.footerGtc") }}</a>
-                    {% if config("Ceres.contact.shop_mail") | length > 0 and config("Ceres.contact.shop_mail") != "your@email.com" %}
-                        <a href="{{ urls.contact }}">{{ trans("Ceres::Template.footerContact") }}</a>
-                    {% endif %}
-                {% endautoescape %}
+                </ul>
             </div>
-            <a rel="nofollow" href="https://www.plentymarkets.eu">
-                <img alt="Plentymarkets GmbH Logo" class="svg plenty-brand" src="{{ plugin_path('Ceres') }}/images/plentymarkets-logo.svg" rel="nofollow" crossorigin="anonymous">
-            </a>
-            <br>
-            <small>&copy; Copyright {{ "now" | date("Y") }} | {{ trans("Ceres::Template.footerAllRightsReserved") }}</small>
+            
+            
+            <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+                <span class="footer-title">Unternehmen</span>
+                <ul class="footerList">
+                    <li><a href="{% Link_Contact() %}">Kontakt</a></li>
+                    <li><a href="{% Link_PrivacyPolicy() %}">Datenschutzerklärung</a></li>
+                    <li><a href="{% Link_TermsConditions() %}">AGB</a></li>
+                    <li><a href="{% Link_LegalDisclosure() %}">Impressum</a></li>
+                </ul>
+            </div>
+            
+            
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 social-media">
+                <span class="footer-title">Social Media</span>
+                <a href="https://www.facebook.com/ACCESSORIES-exclusive-153116904785813/" title="Facebook" target="_blank"><img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/facebook.png" alt="Facebook" title="Facebook" width="24" height="24"/></a>
+                <a href="https://twitter.com/accessories4you" title="Twitter" target="_blank"><img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/twitter.png" alt="Twitter" title="Twitter" width="24" height="24"/></a>
+                <a href="https://ae-accessories-exclusive-gmbh.business.site" title="Google+" target="_blank"><img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/googleplus.png" alt="Google+" title="Google+" width="24" height="24"/></a>
+                <a href="https://www.youtube.com/channel/UCpcNz7V9WjzhxHrgcvkOPEA/videos" title="YouTube" target="_blank"><img src="https://cdn02.plentymarkets.com/w5u2kzpj7f3t/frontend/accessories-exclusive-src/img/youtube.png" alt="YouTube" title="YouTube" width="24" height="24"/></a>
+            </div>
+        
+            
         </div>
     </div>
-</div>
-{% else %}
-    <div class="footer container-max">
-        <div class="row">
-            <div class="col clearfix">
-                {{ footerContainer | raw }}
-            </div>
-        </div>
-        <div class="{% if topButtonPosition == "right" %}back-to-top{% else %}back-to-top-center{% endif %} hidden-sm-down">
-            <i class="fa fa-chevron-up"></i>
-        </div>
 
-        <div class="row">
-            <div class="to-top hidden-md-up" v-scroll-to-top>
-                <i class="fa fa-arrow-up" aria-hidden="true"></i>
-            </div>
-        </div>
-    </div>
-{% endif %}
+
+
+
+
+
+
+
+</footer>
