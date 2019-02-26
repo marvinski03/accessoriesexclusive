@@ -1046,6 +1046,11 @@ div#newsletter {
     padding: 4px 23px;
 }
 
+ul.footerList {
+    list-style: none;
+    padding-left: 0px;
+}
+
 
 
 /** icon font classes **/
