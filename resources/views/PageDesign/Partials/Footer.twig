@@ -49,7 +49,7 @@
                 <form class="form-inline form-block-4-button p" method="post" action="https://www.accessories-exclusive.de/content/startseite/" data-plenty="submit:Validator.validate(this, 'has-error')">
                     <input name="ActionCall" value="WebActionSendCmsForm" type="hidden">
                     <input name="FormID" value="-1" type="hidden">
-                    <input name="BranchId" value="$CurrentCategoryId" type="hidden">
+                    <input name="BranchId" value="#" type="hidden">
                     <div class="form-group">
                         <label class="sr-only" for="newsletterFirstName">Vorname</label>
                         <input class="form-control" id="newsletterFirstName" type="text" name="FormFields[0]" placeholder="Vorname">
@@ -96,14 +96,9 @@
             <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
                 <span class="footer-title">Mein Konto</span>
                 <ul class="footerList">
-                    {% if ! $IsCustomerLoggedIn %}
-                        <li><a href="#">Registrieren</a></li>
-                        <li><a href="#">Login</a></li>
-                    {% else %}
-                        <li><a href="#">Auftragsübersicht</a></li>
-                        <li><a href="#">Mein Merkzettel</a></li>
-                        <li><a href="#">Meine Wunschliste</a></li>
-                    {% endif %}
+                    <li><a href="#">Registrieren</a></li>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Wunschliste</a></li>
                 </ul>
             </div>
             
