@@ -213,6 +213,14 @@ span#warenkorb-qty {
     margin-right:10px;
   }
 
+@media (min-width: 992px){
+  div#mainNavbarCollapsable {
+      float: left;
+      width: calc(100% - 160px);
+  }
+}
+
+
 header.activeSearch .search-box-inner{
 	display: block;
 }
