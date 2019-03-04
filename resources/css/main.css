@@ -1065,7 +1065,8 @@ ul.footerList {
     background: #f6f6f6;
     text-align: center;
     padding: 35px 25px;
-    margin-bottom: 20px;
+    width: calc(100% - 30px);
+    margin: 0 auto 20px auto;
 }
 
 .customHeaderBox p{
