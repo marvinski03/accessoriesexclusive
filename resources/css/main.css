@@ -1229,6 +1229,13 @@ h1.title, h1.title span {
     background: black !important;
 }
 
+.tab-content * {
+    font-size: 14px;
+    text-align: left;
+    line-height: 24px;
+    margin-bottom: 0px;
+}
+
 
 /** icon font classes **/
 
