@@ -1082,6 +1082,10 @@ ul.footerList {
     font-weight: normal;
 }
 
+.list-controls .list-controls-inner {
+    background: #f6f6f6;
+}
+
 
 
 /** icon font classes **/
