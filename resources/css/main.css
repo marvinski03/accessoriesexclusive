@@ -1061,6 +1061,27 @@ ul.footerList {
   background: none !important;
 }
 
+.customHeaderBox {
+    background: #f6f6f6;
+    text-align: center;
+    padding: 35px 25px;
+    margin-bottom: 20px;
+}
+
+.customHeaderBox p{
+  font-size: 14px;
+  line-height: 21px;
+  max-width: 750px;
+  margin: 0 auto;
+  display: block;
+}
+
+.customHeaderBox h1 {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-weight: normal;
+}
+
 
 
 /** icon font classes **/
