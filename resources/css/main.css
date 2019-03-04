@@ -204,6 +204,15 @@ span#warenkorb-qty {
 	display: none;
 }
 
+  .scroll-down-logo{display: none;}
+
+  body.scroll-header header .scroll-down-logo{
+    display: inline-block;
+    float: left;
+    margin-top: 5px;
+    margin-right:10px;
+  }
+
 header.activeSearch .search-box-inner{
 	display: block;
 }
