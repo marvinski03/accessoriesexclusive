@@ -1190,6 +1190,45 @@ ul.footerList {
 }
 
 
+/** SINGLE ITEM **/
+
+.ae-buybox {
+    padding: 25px 0px 10px 25px;
+    background: #f6f6f6;
+    margin-bottom: 13px;
+}
+
+.single span.price.h1, .single span.price.h1 * {
+    color: black !important;
+    font-weight: bold;
+}
+
+.base-price * {
+    font-size: 10px !important;
+    line-height: 120%;
+}
+
+.base-price.text-muted.my-3 {
+    margin-top: 9px !important;
+        margin-bottom: 5px !important;
+}
+
+.ae-buybox span.availability {
+    display: none;
+}
+
+h1.title, h1.title span {
+    font-size: 18px !important;
+    line-height: 27px;
+    text-align: left !important;
+    margin-bottom: 7px;
+    color: black;
+}
+
+.add-to-basket-container .btn.btn-primary {
+    background: black !important;
+}
+
 
 /** icon font classes **/
 
