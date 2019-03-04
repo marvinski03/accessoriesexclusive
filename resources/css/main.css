@@ -208,6 +208,21 @@ header.activeSearch .search-box-inner{
 	display: block;
 }
 
+.wrapper-main>nav.container-max[data-component='breadcrumbs'] {
+    background: white !important;
+    font-size: 11px;
+}
+
+ul.breadcrumb {
+    padding-left: 30px !important;
+    padding-top: 10px !important;
+}
+
+ul.breadcrumb * {
+    color: #5d5d5d;
+}
+
+
 #search-toggle{
 position: absolute;
 right: 0px;
