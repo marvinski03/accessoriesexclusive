@@ -233,10 +233,17 @@ span#warenkorb-qty {
   }
 
   @media (min-width: 992px){
-  div#mainNavbarCollapsable {
+  body.scroll-header div#mainNavbarCollapsable {
       float: left;
       width: calc(100% - 160px);
   }
+}
+
+.scroll-logo-float-row, .scroll-logo-float-row-parent {
+    -webkit-box-orient: inherit;
+    -webkit-box-direction: inherit !important;
+    -ms-flex-direction: inherit;
+    flex-direction: inherit !important;
 }
 
 header.activeSearch .search-box-inner{
