@@ -1078,9 +1078,10 @@ ul.footerList {
 }
 
 .customHeaderBox h1 {
-    margin-bottom: 0px;
     margin-top: 0px;
     font-weight: normal;
+    color: black;
+    margin-bottom: 7px;
 }
 
 .list-controls .list-controls-inner {
