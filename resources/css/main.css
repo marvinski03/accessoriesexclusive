@@ -206,6 +206,25 @@ span#warenkorb-qty {
 
   .scroll-down-logo{display: none;}
 
+  body.scroll-header{
+    padding-top: 171px;
+  }
+
+  .nav > li.active > a,
+  .nav > li:hover > a {
+      box-shadow: none !important;
+      border-color: white !important;
+      color: #5d5d5d;
+  }
+
+  body.scroll-header header {
+    position: fixed;
+    z-index: 999;
+    background: white;
+    width: 100%;
+    top: -125px;
+  }
+
   body.scroll-header header .scroll-down-logo{
     display: inline-block;
     float: left;
@@ -213,13 +232,12 @@ span#warenkorb-qty {
     margin-right:10px;
   }
 
-@media (min-width: 992px){
+  @media (min-width: 992px){
   div#mainNavbarCollapsable {
       float: left;
       width: calc(100% - 160px);
   }
 }
-
 
 header.activeSearch .search-box-inner{
 	display: block;
